@@ -10981,6 +10981,7 @@ a.text-dark:focus {
   color: #fff;
   border: none;
   border-radius: 5px;
+  text-align: center;
 }
 
 .red {
