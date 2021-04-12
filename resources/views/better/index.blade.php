@@ -43,11 +43,7 @@
                                     <label class="list-element__group__name">Beeter name</label>
                                     <h3>{{$better->name}} {{$better->surname}}</h3>
                                         <label class="list-element__group__name">Chosen horse</label>
-                                        @foreach ($horses as $horse)
-                                            @if ($better->horse_id === $horse->id)
-                                                <p>{{$horse->name}}</p>
-                                            @endif
-                                        @endforeach
+                                            {{$better->hasBetOnHorse->name}}
                                         <label class="list-element__group__name">Bet</label>
                                         <p>{{$better->bet}} Eur</p>
                                 </div>
