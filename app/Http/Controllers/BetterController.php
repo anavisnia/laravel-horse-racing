@@ -21,8 +21,7 @@ class BetterController extends Controller
      */
     public function index(Request $request)
     {
-        $horses = Horse::all();
-        $horses = $horses->sortBy('name');
+        $horses = Horse::orderBy('name', 'asc')->get();
         $betters = Better::all();
 
         if ($request->horse_id) {
@@ -51,8 +50,7 @@ class BetterController extends Controller
      */
     public function create()
     {
-        $horses = Horse::all();
-        $horses = $horses->sortBy('name');
+        $horses = Horse::orderBy('name', 'asc')->get();
         return view('better.create', ['horses' => $horses]);
     }
 
@@ -105,8 +103,7 @@ class BetterController extends Controller
      */
     public function edit(Better $better)
     {
-        $horses = Horse::all();
-        $horses = $horses->sortBy('name');
+        $horses = Horse::orderBy('name', 'asc')->get();
         return view('better.edit', ['better' => $better, 'horses' => $horses]);
     }
 

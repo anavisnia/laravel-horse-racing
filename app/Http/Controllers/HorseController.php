@@ -21,8 +21,7 @@ class HorseController extends Controller
      */
     public function index()
     {
-        $horses = Horse::all();
-        $horses = $horses->sortBy('name');
+        $horses = Horse::orderBy('name', 'asc')->get();
         return view('horse.index', ['horses' => $horses]);
     }
 
