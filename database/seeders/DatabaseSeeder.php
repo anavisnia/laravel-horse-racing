@@ -25,8 +25,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $faker = Faker::create();
-        $betters = 10;
-        $horses = 35;
+        $betters = 25;
+        $horses = 7;
 
         foreach(range(1, $horses) as $_) {
         DB::table('horses')->insert([
@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder
             DB::table('betters')->insert([
                     'name' => $faker->firstName(),
                     'surname' => $faker->lastName(),
-                    'bet' => rand(1, 50),
+                    'bet' => rand(1, 75),
                     'horse_id' => rand(1, $horses),
                 ]);
             }
