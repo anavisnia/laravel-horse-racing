@@ -1,0 +1,74 @@
+.list-element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__buttons {
+        display: flex;
+        &>* {
+            margin: 5px;
+        }
+    }
+    &__group {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        &__boldName {
+            font-weight: bold;
+        }
+        &__name {
+            color: gray;
+            font-size: 90%;
+            font-style: italic;
+        }
+    }
+}
+
+.btncustom {
+    font-size: 14px;
+    background-image: linear-gradient(to right, #919aeb, #62bdfc);
+    text-decoration: none!important;
+    text-transform: uppercase;
+    padding: 7px 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.red {
+    background-image:linear-gradient(to right, #ff59ac, hsl(355, 98%, 65%));
+}
+
+.info {
+    background-image:linear-gradient(to right, #fdcd74, hsl(24, 100%, 62%))
+}
+.btncustom:hover {
+    color: rgb(53, 53, 53);
+    cursor: pointer;
+    box-shadow: 0px 10px 20px #9da6f84f;
+}
+.make-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &.column {
+        flex-direction: column;
+        height: 37px;
+        justify-content: center;
+        margin: 0 12px;
+    }
+    p {
+        margin: 0;
+    }
+    select,
+    label,
+    input {
+        margin: 0 6px;
+    }
+    &.form-group {
+        margin-bottom: 0;
+    }
+}
+
+.paginator-container {
+    margin: 12px 0;
+}
