@@ -8,7 +8,7 @@
                     Add New Better
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{route('better.update')}}">
+                    <form method="POST" action="{{route('better.update', $better)}}">
                         <div class="form-group">
                             <label>Name:</label>
                             <input type="text" class="form-control" name="better_name" value="{{old('bette_name')}}">
